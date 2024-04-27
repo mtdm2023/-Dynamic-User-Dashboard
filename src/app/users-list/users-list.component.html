@@ -1,0 +1,18 @@
+<app-spinner *ngIf="isLoaded == true"></app-spinner>
+<app-header (search)="searchUsers($event)"></app-header>
+<div class="user-list-container mt-5 ">
+  <mat-card *ngFor="let user of filteredUsers" class="user-card" [routerLink]="['/user', user.id]" [@scaleOnHover]="hovered === user.id ? 'hover' : 'normal'"
+  (mouseenter)="onHover(user.id)" (mouseleave)="onLeave()">
+    <mat-card-header style="cursor: pointer;">
+      <div mat-card-avatar class="avatar">
+        <img style=" width: 64px;height: 64px;border-radius: 50%;" src="{{user.avatar}}" alt="">
+      </div>
+      <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+      <mat-card-subtitle>User ID: {{ user.id }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+</div>
+<mat-paginator [ngStyle]="{'border-radius' : '10px' }" [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="pageSize" [length]="totalUsers"
+               (page)="onPageChange($event)">
+</mat-paginator>

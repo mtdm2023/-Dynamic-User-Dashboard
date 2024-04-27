@@ -1,0 +1,49 @@
+
+<app-spinner *ngIf="isloading == true"></app-spinner>
+<div *ngIf="user">
+
+
+
+<div  class="container mt-5" >
+
+  <div class="row d-flex justify-content-center">
+
+      <div class="col-md-7" appUserdetailsSacal>
+
+          <div class="card p-3 py-4">
+
+              <div class="text-center">
+                  <img src="{{user.avatar}}" width="100" class="rounded-circle">
+              </div>
+
+              <div class="text-center mt-3">
+                  <span class="bg-secondary p-1 px-4 rounded text-white">Name</span>
+                  <h5 class="mt-2 mb-0">{{ user.first_name }} {{ user.last_name }}</h5>
+                  <span>User ID: {{ user.id }}</span>
+
+                  <div class="px-4 mt-1">
+                      <p class="fonts">Email: {{user.email}}</p>
+
+                  </div>
+
+
+                  <div class="buttons">
+
+                      <button class="btn btn-outline-primary px-4" [routerLink]="['/home']">Back</button>
+
+                  </div>
+
+
+              </div>
+
+
+
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+</div>

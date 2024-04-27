@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://db.onlinewebfonts.com/c/7668f634eb4865a48f04d52ea3fb9b27?family=Neo+Sans+Arabic+Medium);
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+body {
+  background: rgb(99, 39, 120) !important;
+  width: inherit;
+  height: inherit;
+
+}
+
+
+*{
+  font-family: Almarai;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+html{
+  overflow-x: auto;
+}
+
